@@ -1,1 +1,3 @@
 client/*.h264
+server/node_modules/*
+server/log.txt
