@@ -41,6 +41,13 @@ app.get('/md5', function(req, res){
 
 });
 
+app.get('/*', function(req, res){
+	client_connect(req);
+	res.status(404);
+	res.send("<h1>404 Memes not here</h1>")
+	Log.info(getIP(req) + " requested non existent page");
+});
+
 //Launch 
 var server = app.listen(80, function(){
 	let host = "berrybox";
